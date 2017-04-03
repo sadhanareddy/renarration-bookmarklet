@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   	<title>Web Page Transformation Tool</title>
+   	<meta charset="utf-8">
+   	<meta name="viewport" content="width=device-width, initial-scale=1">
+   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   	<style type="text/css">
+  	
+	  	body{
+	  		background-color: black;
+	  	}
+
+	  	.jumbotron{
+	  		background-color: #162252
+	  	}
+
+	  	h1, #tag{
+	  		color: white !important;
+	  	}
+
+	  	#instruction{
+	  		color: white !important;
+	  		font-size: 200%;
+	  	}
+
+	  	#js-link{
+  		    background:orange;
+	        color: black;
+	        display: box;
+	        padding:5px;
+	        text-decoration:none;
+	        font-weight:bold;
+	  	}
+
+   	</style>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Web Page Transformation Tool</h1>      
+    <p id="tag">Tool to transform the web pages</p>
+  </div>
+
+  <div class="row">
+  	<div class="col-sm-12">
+  		<p id="instruction">Drag this link to the bookmarks tool bar</p>
+ 
+  		<a id="js-link" href="javascript:(function(){if (!($ = window.jQuery)){
+			    script = document.createElement('script');
+			   	script.src = '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'; 
+			    script.onload= transform_tool;
+			    document.getElementsByTagName('head')[0].appendChild(script);}
+				else{transformTool();} 
+				function transformTool(){
+					script = document.createElement('script');
+					script.src='//rawgit.com/sadhanareddy/css-changer-tool/master/switch_css.js';
+					document.getElementsByTagName('head')[0].appendChild(script);
+				}}())">Transformation tool
+		</a>
+  	</div>
+  </div>
+</div>
+
+</body>
+</html>
